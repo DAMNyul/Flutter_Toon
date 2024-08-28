@@ -1,3 +1,5 @@
+import "dart:convert";
+
 import "package:http/http.dart" as http;
 
 class ApiServices {
@@ -8,7 +10,7 @@ class ApiServices {
     final url = Uri.parse('$baseUrl/$today');
     final response = await http.get(url);
     if (response.statusCode == 200) {
-      print(response.body);
+      jsonDecode(response.body);
       return;
     }
     throw Error();
