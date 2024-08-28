@@ -1,7 +1,4 @@
-# flutter_application_1
-
-A new Flutter project.
-
+플러터 공부  
 ## Getting Started
 
 This project is a starting point for a Flutter application.
