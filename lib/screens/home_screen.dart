@@ -30,7 +30,7 @@ class HomeScreen extends StatelessWidget {
             return Column(
               children: [
                 const SizedBox(
-                  height: 200,
+                  height: 50,
                 ),
                 Expanded(
                   child: makeList(futureResult),
@@ -52,10 +52,15 @@ class HomeScreen extends StatelessWidget {
       itemCount: futureResult.data!.length,
       itemBuilder: (context, index) {
         var webtoon = futureResult.data![index];
-        return Text(webtoon.title);
+        return Column(
+          children: [
+            Image.network(webtoon.thumb),
+            Text(webtoon.title),
+          ],
+        );
       },
       separatorBuilder: (context, index) => const SizedBox(
-        width: 20,
+        width: 40,
       ),
     );
   }
