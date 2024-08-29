@@ -5,7 +5,7 @@ import 'package:flutter_application_1/services/api_services.dart';
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
 
-  Future<List<WebtoonModel>> webtoons = ApiServices.getTodaysToons();
+  final Future<List<WebtoonModel>> webtoons = ApiServices.getTodaysToons();
 
   @override
   Widget build(BuildContext context) {
