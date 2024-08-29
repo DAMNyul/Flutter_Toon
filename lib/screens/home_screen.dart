@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 2,
+        elevation: 1,
         backgroundColor: Colors.white,
         foregroundColor: Colors.green,
         title: const Text(
