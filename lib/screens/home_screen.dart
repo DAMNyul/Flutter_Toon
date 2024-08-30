@@ -52,9 +52,16 @@ class HomeScreen extends StatelessWidget {
       itemCount: futureResult.data!.length,
       itemBuilder: (context, index) {
         var webtoon = futureResult.data![index];
+
         return Column(
           children: [
-            Image.network(webtoon.thumb),
+            Image.network(
+              webtoon.thumb,
+              headers: const {
+                "User-Agent":
+                    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+              },
+            ),
             Text(webtoon.title),
           ],
         );
